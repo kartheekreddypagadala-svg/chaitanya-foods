@@ -54,6 +54,30 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
     padding: 0 1.75rem;
 }
 
+/* Announcement Bar */
+.announcement-bar {
+    background: var(--cocoa);
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    letter-spacing: 0.4px;
+}
+
+.announcement-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.announcement-link {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
 /* Ambient 3D Orbs */
 .ambient-orb {
     position: fixed;
@@ -776,6 +800,31 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
     gap: 0.5rem;
     padding-top: 0.75rem;
     border-top: 1px solid var(--border-soft);
+}
+
+/* Gifting Banner */
+.gifting-banner {
+    background: linear-gradient(135deg, #FFF7E6 0%, #F4E4C5 100%);
+    border: 1px solid rgba(217, 146, 30, 0.28);
+    border-radius: 32px;
+    padding: 3.25rem 2.5rem;
+    box-shadow: var(--shadow-card-3d);
+}
+
+.gifting-content {
+    max-width: 680px;
+}
+
+.gifting-content h2 {
+    font-size: 2.25rem;
+    color: var(--cocoa);
+    margin-bottom: 0.75rem;
+}
+
+.gifting-content p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
 /* Advance Orders Section */
