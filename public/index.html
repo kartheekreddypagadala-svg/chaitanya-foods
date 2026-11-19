@@ -3,127 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaitanya Foods - Fresh Dry Fruits & Traditional Telugu Sweets</title>
+    <title>Chaitanya Foods | Fresh Dry Fruits & Traditional Telugu Sweets</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Ambient 3D Glow Orbs -->
+    <div class="ambient-orb orb-gold"></div>
+    <div class="ambient-orb orb-amber"></div>
+
+    <!-- Floating Glass Navigation -->
     <header class="header">
         <div class="container nav-container">
-            <div class="logo">
-                <i class="fa-solid fa-bowl-food logo-icon"></i>
-                <span>CHAITANYA FOODS</span>
-            </div>
+            <a href="#" class="logo">
+                <div class="logo-3d-badge">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">CHAITANYA FOODS</span>
+                    <span class="brand-sub">Dry Fruits & Telugu Sweets</span>
+                </div>
+            </a>
+
             <nav class="nav-links">
                 <a href="#dry-fruits">Dry Fruits</a>
                 <a href="#sweets">Sweets</a>
-                <a href="#advance-orders">Advance orders</a>
+                <a href="#advance-orders">Advance Orders</a>
                 <a href="#contact">Contact</a>
             </nav>
+
             <div class="nav-actions">
-                <button class="cart-btn" id="cartToggleBtn">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                <button class="cart-btn-3d" id="cartToggleBtn" aria-label="Open Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
-                <a href="tel:9381331281" class="call-badge">
-                    <i class="fa-solid fa-phone"></i> Call 93813 31281
+                <a href="tel:9381331281" class="call-pill-3d">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>93813 31281</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- 3D Hero Section -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="badge-tag">DRY FRUITS & TELUGU SWEETS</span>
-                <h1>Fresh dry fruits and traditional sweets, packed for you.</h1>
-                <p>Premium cashews and almonds, pootha rekulu, bobbatlu, laddus and more. Freshly packed and delivered to your home.</p>
-                <div class="hero-buttons">
-                    <a href="#sweets" class="btn btn-primary">Order now</a>
-                    <a href="#dry-fruits" class="btn btn-outline">See our sweets</a>
+                <div class="eyebrow-pill">
+                    <span class="pulse-dot"></span> DRY FRUITS & TELUGU SWEETS
                 </div>
-                <div class="delivery-pill">
-                    <i class="fa-solid fa-truck-fast"></i> Home delivery available
+                <h1>Fresh dry fruits and traditional sweets, <span class="text-gradient">packed for you.</span></h1>
+                <p class="hero-desc">Premium factory-direct cashews and almonds, authentic pootha rekulu, bobbatlu, laddus and more. Freshly packed and delivered straight to your home.</p>
+                
+                <div class="hero-cta-group">
+                    <a href="#sweets" class="btn-3d btn-primary-3d">
+                        <span>Order Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#dry-fruits" class="btn-3d btn-glass-3d">
+                        <span>Explore Dry Fruits</span>
+                    </a>
+                </div>
+
+                <div class="trust-row">
+                    <div class="delivery-chip">
+                        <i class="fa-solid fa-truck-fast"></i> Home delivery available
+                    </div>
+                    <div class="rating-chip">
+                        <i class="fa-solid fa-star"></i> 100% Freshly Packed
+                    </div>
                 </div>
             </div>
-            <div class="hero-3d-visual">
-                <div class="floating-card-bg">
-                    <div class="circle-img-group">
-                        <div class="img-badge img-1"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80" alt="Cashews"></div>
-                        <div class="img-badge img-2"><img src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=300&q=80" alt="Almonds"></div>
-                        <div class="img-badge img-3"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=300&q=80" alt="Sweets"></div>
-                        <div class="img-badge img-4"><img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=300&q=80" alt="Bobbatlu"></div>
+
+            <!-- Interactive 3D Floating Showcase -->
+            <div class="hero-stage" id="heroStage">
+                <div class="stage-pedestal">
+                    <div class="stage-ring ring-outer"></div>
+                    <div class="stage-ring ring-inner"></div>
+                    
+                    <div class="floating-dish dish-1" data-depth="25">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" alt="Whole Cashews">
+                        <span class="dish-label">W320 Cashews</span>
+                    </div>
+                    <div class="floating-dish dish-2" data-depth="40">
+                        <img src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=400&q=80" alt="Almonds">
+                        <span class="dish-label">Fresh Almonds</span>
+                    </div>
+                    <div class="floating-dish dish-3" data-depth="30">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80" alt="Pootha Rekulu">
+                        <span class="dish-label">Pootha Rekulu</span>
+                    </div>
+                    <div class="floating-dish dish-4" data-depth="20">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=400&q=80" alt="Bobbatlu">
+                        <span class="dish-label">Bobbatlu</span>
+                    </div>
+
+                    <div class="center-emblem-3d">
+                        <i class="fa-solid fa-award"></i>
+                        <strong>Factory Direct</strong>
+                        <span>Quality Guaranteed</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Banner -->
-    <section class="features-banner">
-        <div class="container features-flex">
-            <div class="feature-item"><i class="fa-solid fa-boxes-packing"></i> Direct from factory</div>
-            <div class="feature-item"><i class="fa-solid fa-box-open"></i> Freshly packed</div>
-            <div class="feature-item"><i class="fa-solid fa-tags"></i> Affordable prices</div>
-            <div class="feature-item"><i class="fa-solid fa-house-chimney"></i> Home delivery available</div>
-            <div class="feature-item"><i class="fa-solid fa-calendar-check"></i> Advance orders for all sweets</div>
+    <!-- 3D Tactile Ribbon Bar -->
+    <section class="ribbon-section">
+        <div class="container">
+            <div class="ribbon-card-3d">
+                <div class="ribbon-item"><i class="fa-solid fa-industry"></i> Direct from factory</div>
+                <div class="ribbon-item"><i class="fa-solid fa-box-open"></i> Freshly packed</div>
+                <div class="ribbon-item"><i class="fa-solid fa-indian-rupee-sign"></i> Affordable prices</div>
+                <div class="ribbon-item"><i class="fa-solid fa-motorcycle"></i> Home delivery available</div>
+                <div class="ribbon-item"><i class="fa-solid fa-calendar-check"></i> Advance orders for all sweets</div>
+            </div>
         </div>
     </section>
 
     <!-- Dry Fruits Section -->
     <section id="dry-fruits" class="section">
         <div class="container">
-            <span class="section-category">DRY FRUITS</span>
-            <h2 class="section-title">Cashews and almonds, packed fresh.</h2>
-            <div class="products-grid" id="dryFruitsGrid">
-                <!-- Dynamically loaded -->
+            <div class="section-header">
+                <span class="section-kicker">DRY FRUITS</span>
+                <h2 class="section-title">Cashews and almonds, packed fresh.</h2>
+            </div>
+            <div class="cards-grid-2" id="dryFruitsGrid">
+                <!-- Populated dynamically -->
             </div>
         </div>
     </section>
 
     <!-- Traditional Sweets Section -->
-    <section id="sweets" class="section bg-light-cream">
+    <section id="sweets" class="section section-warm">
         <div class="container">
-            <span class="section-category">TRADITIONAL SWEETS</span>
-            <h2 class="section-title">Sweets made for festivals and family tables.</h2>
-            <div class="products-grid" id="sweetsGrid">
-                <!-- Dynamically loaded -->
+            <div class="section-header">
+                <span class="section-kicker">TRADITIONAL SWEETS</span>
+                <h2 class="section-title">Sweets made for festivals and family tables.</h2>
             </div>
-            
-            <h3 class="subsection-title">More sweets</h3>
-            <div class="carousel-grid" id="moreSweetsGrid">
-                <!-- Dynamically loaded -->
+            <div class="cards-grid-2" id="sweetsGrid">
+                <!-- Populated dynamically -->
+            </div>
+
+            <div class="sub-header">
+                <h3>More traditional sweets</h3>
+                <p>Handcrafted in small batches with pure ghee and jaggery</p>
+            </div>
+            <div class="mini-cards-grid" id="moreSweetsGrid">
+                <!-- Populated dynamically -->
             </div>
         </div>
     </section>
 
-    <!-- Advance Orders Banner Section -->
-    <section id="advance-orders" class="advance-banner-section">
+    <!-- 3D Dark Cocoa Advance Orders Banner -->
+    <section id="advance-orders" class="advance-section">
         <div class="container">
-            <span class="section-category light">ADVANCE ORDERS</span>
-            <h2 class="telugu-title">ముందస్తు ఆర్డర్లపై అన్ని రకాల స్వీట్స్ సప్లై చేయబడును</h2>
-            <p>All kinds of sweets are supplied on advance orders. Call early so your order is ready when you need it.</p>
+            <div class="advance-card-3d">
+                <div class="advance-glow"></div>
+                <span class="kicker-gold">ADVANCE ORDERS • ముందస్తు ఆర్డర్లు</span>
+                <h2 class="telugu-headline">ముందస్తు ఆర్డర్లపై అన్ని రకాల స్వీట్స్ సప్లై చేయబడును</h2>
+                <p>All kinds of traditional Telugu sweets are freshly prepared and supplied on advance orders for weddings, festivals, and family functions. Call early so your order is ready right on time.</p>
+                <div class="advance-actions">
+                    <button class="btn-3d btn-gold-3d" id="openAdvanceModalBtn">
+                        <i class="fa-solid fa-calendar-plus"></i> Book Advance Order
+                    </button>
+                    <a href="tel:9381331281" class="btn-3d btn-outline-light">
+                        <i class="fa-solid fa-phone"></i> Call 93813 31281
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Order Now / Contact Section -->
-    <section id="contact" class="section order-cta-section">
-        <div class="container order-cta-grid">
-            <div class="order-text">
-                <span class="section-category">ORDER NOW</span>
+    <!-- Order Now / Direct Contact Section -->
+    <section id="contact" class="section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <span class="section-kicker">ORDER NOW</span>
                 <h2>Tell us what you need.<br>We will pack it fresh.</h2>
-                <p>Call or message Chaitanya Lakshmi with the items and quantity you want, and ask for current prices. Home delivery is available.</p>
+                <p>Call or message <strong>Chaitanya Lakshmi</strong> with the items and quantity you want, and ask for today's fresh factory prices. Fast home delivery is available.</p>
             </div>
-            <div class="contact-card-3d">
-                <span class="contact-subtitle">Chaitanya Lakshmi</span>
-                <h3 class="phone-number">93813 31281</h3>
-                <div class="contact-buttons">
-                    <a href="tel:9381331281" class="btn btn-dark"><i class="fa-solid fa-phone"></i> Call now</a>
-                    <a href="https://wa.me/919381331281?text=Hi%2C%20I%20would%20like%20to%20order%20dry%20fruits%20and%20sweets." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+
+            <div class="contact-box-3d">
+                <div class="contact-badge">Direct Order Desk</div>
+                <span class="contact-person">Chaitanya Lakshmi</span>
+                <a href="tel:9381331281" class="contact-phone">93813 31281</a>
+                <div class="contact-btn-row">
+                    <a href="tel:9381331281" class="btn-3d btn-primary-3d">
+                        <i class="fa-solid fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/919381331281?text=Namaste%20Chaitanya%20Foods%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn-3d btn-whatsapp-3d">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
@@ -131,54 +204,61 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-flex">
-            <p>Chaitanya Foods</p>
-            <p>Dry fruits & Telugu sweets</p>
-            <p>Phone: 93813 31281</p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>Chaitanya Foods</strong>
+                <span>Fresh Dry Fruits & Traditional Telugu Sweets</span>
+            </div>
+            <div class="footer-contact">
+                <span>Phone: <a href="tel:9381331281">93813 31281</a></span>
+            </div>
         </div>
     </footer>
 
-    <!-- Cart Drawer Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-content">
-            <div class="cart-header">
-                <h3>Your Shopping Cart</h3>
-                <button class="close-cart" id="closeCartBtn">&times;</button>
+    <!-- 3D Slide-Over Cart Drawer -->
+    <div class="modal-backdrop" id="cartModal">
+        <div class="drawer-3d">
+            <div class="drawer-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Your Fresh Basket</h3>
+                <button class="icon-close" id="closeCartBtn">&times;</button>
             </div>
-            <div class="cart-items" id="cartItemsList">
-                <!-- Cart Items -->
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">
-                    <span>Total:</span>
-                    <span id="cartTotalPrice">₹0</span>
+            <div class="drawer-body" id="cartItemsList"></div>
+            <div class="drawer-footer">
+                <div class="total-row">
+                    <span>Estimated Total</span>
+                    <strong id="cartTotalPrice">₹0</strong>
                 </div>
-                <button class="btn btn-primary btn-block" id="checkoutBtn">Proceed to Checkout</button>
+                <button class="btn-3d btn-primary-3d btn-full" id="checkoutBtn">
+                    Proceed to Order <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Checkout Modal -->
-    <div class="checkout-modal" id="checkoutModal">
-        <div class="checkout-content">
-            <div class="cart-header">
-                <h3>Complete Your Order</h3>
-                <button class="close-cart" id="closeCheckoutBtn">&times;</button>
+    <!-- Checkout / Advance Order Modal -->
+    <div class="modal-backdrop" id="checkoutModal">
+        <div class="dialog-3d">
+            <div class="drawer-header">
+                <h3 id="modalOrderTitle">Complete Your Order</h3>
+                <button class="icon-close" id="closeCheckoutBtn">&times;</button>
             </div>
             <form id="checkoutForm">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="customerName" required placeholder="Enter your name">
+                <input type="hidden" id="orderType" value="instant">
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <input type="text" id="customerName" required placeholder="Enter full name">
                 </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="customerPhone" required placeholder="10-digit mobile number">
+                <div class="input-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="customerPhone" required placeholder="e.g. 98765 43210">
                 </div>
-                <div class="form-group">
-                    <label>Delivery Address</label>
-                    <textarea id="customerAddress" rows="3" required placeholder="Enter delivery address"></textarea>
+                <div class="input-group">
+                    <label>Delivery Address & Notes</label>
+                    <textarea id="customerAddress" rows="3" required placeholder="House/Flat No, Street, Area, or Advance Order Date"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Confirm Order</button>
+                <button type="submit" class="btn-3d btn-primary-3d btn-full">
+                    Confirm Order
+                </button>
             </form>
         </div>
     </div>
