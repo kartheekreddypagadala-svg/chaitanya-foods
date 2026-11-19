@@ -6,8 +6,7 @@ frontend:
         - npm install
     build:
       commands:
-        # If you don't have a build step, you can leave this empty or put echo "Building..."
-        - echo "Skipping build step for static site"
+        - npm run build
   artifacts:
     baseDirectory: public
     files:
