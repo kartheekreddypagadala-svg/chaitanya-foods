@@ -1,5 +1,4 @@
-```javascript
-const CLIENT_PRODUCTS = [
+`const CLIENT_PRODUCTS = [
     {
         id: 1,
         name: 'CASHEW NUTS',
@@ -376,4 +375,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadProducts();
 });
-```[cite: 69]
