@@ -1,4 +1,4 @@
-`const CLIENT_PRODUCTS = [
+ const CLIENT_PRODUCTS = [
     {
         id: 1,
         name: 'CASHEW NUTS',
