@@ -1,7 +1,7 @@
 {
   "name": "chaitanya-foods",
-  "version": "2.0.0",
-  "description": "3D Luxury E-Commerce Website for Chaitanya Foods (Dry Fruits & Traditional Telugu Sweets)",
+  "version": "3.0.0",
+  "description": "Chaitanya Foods - Fresh Dry Fruits & Traditional Telugu Sweets Web Application",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
