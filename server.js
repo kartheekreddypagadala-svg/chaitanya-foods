@@ -11,7 +11,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// MySQL Database Connection Pool
 const pool = mysql.createPool({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'root',
@@ -22,17 +21,15 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-// Test DB Connection
 pool.getConnection()
-    .then(connection => {
+    .then(conn => {
         console.log('Connected to MySQL Database successfully!');
-        connection.release();
+        conn.release();
     })
     .catch(err => {
-        console.error('Database connection failed:', err.message);
+        console.warn('MySQL connection warning (frontend fallback active):', err.message);
     });
 
-// API Routes
 app.get('/api/products', async (req, res) => {
     try {
         const [rows] = await pool.query('SELECT * FROM products');
@@ -56,5 +53,5 @@ app.post('/api/orders', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Chaitanya Foods server is running on http://localhost:${PORT}`);
+    console.log(`Chaitanya Foods 3D server running on http://localhost:${PORT}`);
 });
