@@ -1,95 +1,95 @@
-const FALLBACK_PRODUCTS = [
+const CLIENT_PRODUCTS = [
     {
         id: 1,
-        name: 'Cashew Nuts (W320)',
+        name: 'CASHEW NUTS',
         category: 'dry_fruits',
-        description: 'Premium quality whole cashews, freshly packed and direct from the factory at affordable prices.',
-        price: 750,
-        unit: '500g',
+        subtitle: 'Direct From Factory • Affordable Prices',
+        description: 'Premium quality cashews, freshly packed, direct from factory. Full cashew, cashew pieces, and pot roasted cashews are available at affordable prices.',
+        packs: ['250g', '500g', '1 kg', 'Bulk Order'],
         image_url: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
         badge: 'Factory Direct',
-        tags: 'Full cashews,Cashew pieces,Pacha jeedipappu',
+        tags: 'Full Cashew,Cashew Pieces,Pot Roasted Cashews',
         is_featured: 1
     },
     {
         id: 2,
-        name: 'Premium Almonds',
+        name: 'ALMONDS',
         category: 'dry_fruits',
-        description: 'Fresh, quality almonds available in multiple sizes. Roasted almonds also available on request.',
-        price: 850,
-        unit: '500g',
+        subtitle: 'Multiple Sizes & Roasted Available',
+        description: 'Best quality almonds of multiple sizes, freshly packed. Roasted almonds are also available.',
+        packs: ['250g', '500g', '1 kg', 'Bulk Order'],
         image_url: 'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=600&q=80',
-        badge: 'Fresh Harvest',
-        tags: 'Multiple sizes,Roasted',
+        badge: 'Best Quality',
+        tags: 'Multiple Sizes,Roasted Almonds',
         is_featured: 1
     },
     {
         id: 3,
-        name: 'Pootha Rekulu',
+        name: 'POOTHA REKULU',
         category: 'sweets',
-        description: 'Thin sheets of rice batter rolled around pure ghee and sweet filling. Choose your favourite kind.',
-        price: 400,
-        unit: 'Box of 10',
+        subtitle: '4 Traditional Varieties Available',
+        description: 'Sugar Pootharekulu, Jaggery Pootharekulu, Sugar Dry Fruit Pootharekulu, and Jaggery Dry Fruit Pootharekulu are available.',
+        packs: ['Box of 10', 'Box of 20', 'Function Pack'],
         image_url: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80',
-        badge: 'Atreyapuram Special',
-        tags: 'Sugar,Jaggery,Sugar dry fruit,Jaggery dry fruit',
+        badge: '4 Varieties',
+        tags: 'Sugar Pootharekulu,Jaggery Pootharekulu,Sugar Dry Fruit Pootharekulu,Jaggery Dry Fruit Pootharekulu',
         is_featured: 1
     },
     {
         id: 4,
-        name: 'Bobbatlu (బొబ్బట్లు)',
+        name: 'BOBBATLU (బొబ్బట్లు)',
         category: 'sweets',
-        description: 'Each piece is made with the finest ingredients and pure ghee, so every bite is full of flavour.',
-        price: 350,
-        unit: '5 pcs',
+        subtitle: 'NETI BOBBATLU AVAILABLE',
+        description: 'Each piece of Bobbatlu is made with the finest ingredients to ensure that every bite is a burst of flavor.',
+        packs: ['5 pcs', '10 pcs', '25 pcs (Advance)'],
         image_url: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80',
-        badge: 'Festival Favorite',
-        tags: 'Medium taste available',
+        badge: 'Neti Bobbatlu',
+        tags: 'Neti Bobbatlu Available,Pure Ghee',
         is_featured: 1
     },
     {
         id: 5,
-        name: 'Ariselu (అరిసెలు)',
+        name: 'ARISELU',
         category: 'sweets',
-        description: 'Traditional crispy-edged rice flour and pure jaggery discs.',
-        price: 300,
-        unit: '500g',
+        subtitle: 'Traditional Sweet',
+        description: 'Crispy golden traditional rice flour and pure jaggery ariselu.',
+        packs: ['250g', '500g', '1 kg'],
         image_url: 'https://images.unsplash.com/photo-1599487484177-6c62445d568a?auto=format&fit=crop&w=600&q=80',
-        badge: 'Traditional',
-        tags: 'Jaggery',
+        badge: 'Freshly Packed',
+        tags: 'Traditional',
         is_featured: 0
     },
     {
         id: 6,
-        name: 'Raagi Laddu (రాగి లడ్డు)',
+        name: 'RAAGI LADDU',
         category: 'sweets',
-        description: 'Healthy finger millet laddus prepared with pure ghee and jaggery.',
-        price: 280,
-        unit: '500g',
+        subtitle: 'Healthy Millet Sweet',
+        description: 'Wholesome raagi laddus prepared with pure ghee and jaggery.',
+        packs: ['250g', '500g', '1 kg'],
         image_url: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80',
         badge: 'Healthy',
-        tags: 'Millet & Ghee',
+        tags: 'Raagi & Ghee',
         is_featured: 0
     },
     {
         id: 7,
-        name: 'Dry Fruit Laddu',
+        name: 'DRY FRUIT LADDU',
         category: 'sweets',
-        description: 'Rich almonds, cashews, pistachios, and dates with zero added sugar.',
-        price: 600,
-        unit: '500g',
+        subtitle: 'Rich Nuts & Dates',
+        description: 'Loaded with premium cashews, almonds, pistachios, and dates.',
+        packs: ['250g', '500g', '1 kg'],
         image_url: 'https://images.unsplash.com/photo-1599487484177-6c62445d568a?auto=format&fit=crop&w=600&q=80',
-        badge: 'No Added Sugar',
-        tags: '100% Nuts',
+        badge: 'Premium',
+        tags: '100% Dry Fruits',
         is_featured: 0
     },
     {
         id: 8,
-        name: 'Nuvvundalu (నువ్వుండలు)',
+        name: 'NUVVUNDALU',
         category: 'sweets',
-        description: 'Traditional sesame seed and organic jaggery laddus.',
-        price: 250,
-        unit: '500g',
+        subtitle: 'Sesame & Jaggery',
+        description: 'Crunchy roasted sesame seed and organic jaggery laddus.',
+        packs: ['250g', '500g', '1 kg'],
         image_url: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80',
         badge: 'Classic',
         tags: 'Sesame',
@@ -97,24 +97,24 @@ const FALLBACK_PRODUCTS = [
     },
     {
         id: 9,
-        name: 'Sunnundalu (సున్నుండలు)',
+        name: 'SUNNUNDALU',
         category: 'sweets',
-        description: 'Classic roasted urad dal and pure ghee laddus.',
-        price: 320,
-        unit: '500g',
+        subtitle: 'Pure Ghee Special',
+        description: 'Melt-in-the-mouth roasted urad dal and pure ghee laddus.',
+        packs: ['250g', '500g', '1 kg'],
         image_url: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80',
         badge: 'Signature',
-        tags: 'Pure Ghee',
+        tags: 'Urad Dal & Ghee',
         is_featured: 0
     }
 ];
 
-// Set your EC2/Backend API URL here once deployed (e.g., 'https://api.yourdomain.com'), or leave empty '' for same-origin
 const API_BASE_URL = '';
 
 document.addEventListener('DOMContentLoaded', () => {
     let products = [];
-    let cart = JSON.parse(localStorage.getItem('chaitanya_cart_v2')) || [];
+    let cart = JSON.parse(localStorage.getItem('chaitanya_client_basket_v3')) || [];
+    const selectedVariants = {};
 
     const dryFruitsGrid = document.getElementById('dryFruitsGrid');
     const sweetsGrid = document.getElementById('sweetsGrid');
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartModal = document.getElementById('cartModal');
     const checkoutModal = document.getElementById('checkoutModal');
     const cartItemsList = document.getElementById('cartItemsList');
-    const cartTotalPrice = document.getElementById('cartTotalPrice');
+    const cartTotalItems = document.getElementById('cartTotalItems');
 
     // 3D Interactive Tilt on Hero Pedestal
     const heroStage = document.getElementById('heroStage');
@@ -145,10 +145,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const res = await fetch(`${API_BASE_URL}/api/products`);
             if (!res.ok) throw new Error('API unavailable');
             const data = await res.json();
-            products = Array.isArray(data) && data.length > 0 ? data : FALLBACK_PRODUCTS;
+            products = Array.isArray(data) && data.length > 0
+                ? data.map(item => ({
+                    ...item,
+                    packs: item.packs || ['250g', '500g', '1 kg']
+                }))
+                : CLIENT_PRODUCTS;
         } catch (err) {
-            products = FALLBACK_PRODUCTS;
+            products = CLIENT_PRODUCTS;
         }
+
+        products.forEach(p => {
+            const firstTag = (p.tags || '').split(',').map(t => t.trim()).filter(Boolean)[0] || '';
+            selectedVariants[p.id] = firstTag;
+        });
+
         renderAll();
     }
 
@@ -169,11 +180,21 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartUI();
     }
 
+    window.selectVariant = (productId, tag, btnEl) => {
+        selectedVariants[productId] = tag;
+        const parent = btnEl.parentElement;
+        parent.querySelectorAll('.tag-pill').forEach(el => el.classList.remove('active'));
+        btnEl.classList.add('active');
+    };
+
     function buildFeaturedCard(p) {
-        const tagsHtml = (p.tags || '')
-            .split(',')
-            .filter(Boolean)
-            .map(t => `<span class="tag-pill">${t.trim()}</span>`)
+        const tags = (p.tags || '').split(',').map(t => t.trim()).filter(Boolean);
+        const tagsHtml = tags
+            .map((t, idx) => `<button type="button" class="tag-pill ${idx === 0 ? 'active' : ''}" onclick="selectVariant(${p.id}, '${t.replace(/'/g, "\'")}', this)">${t}</button>`)
+            .join('');
+
+        const packsOptions = (p.packs || ['250g', '500g', '1 kg'])
+            .map(pk => `<option value="${pk}">${pk}</option>`)
             .join('');
 
         const card = document.createElement('div');
@@ -185,12 +206,15 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="product-details">
                 <h3>${p.name}</h3>
+                <div class="product-subtitle">${p.subtitle || ''}</div>
                 <p>${p.description}</p>
                 <div class="tag-list">${tagsHtml}</div>
                 <div class="product-bottom">
-                    <div class="price-tag">₹${p.price} <span>/ ${p.unit}</span></div>
+                    <select class="pack-select" id="pack-${p.id}" aria-label="Select Pack Size">
+                        ${packsOptions}
+                    </select>
                     <button class="add-btn-3d" onclick="addToCart(${p.id})">
-                        <i class="fa-solid fa-plus"></i> Add
+                        <i class="fa-solid fa-plus"></i> Add to Order
                     </button>
                 </div>
             </div>
@@ -199,6 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function buildMiniCard(p) {
+        const packsOptions = (p.packs || ['250g', '500g', '1 kg'])
+            .map(pk => `<option value="${pk}">${pk}</option>`)
+            .join('');
+
         const card = document.createElement('div');
         card.className = 'mini-card-3d';
         card.innerHTML = `
@@ -206,11 +234,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${p.image_url}" alt="${p.name}">
             </div>
             <h4>${p.name}</h4>
-            <div class="mini-unit">${p.unit}</div>
+            <div class="mini-unit">${p.subtitle || 'Traditional Sweet'}</div>
             <div class="mini-bottom">
-                <div class="price-tag">₹${p.price}</div>
+                <select class="pack-select" id="pack-${p.id}" aria-label="Select Pack Size">
+                    ${packsOptions}
+                </select>
                 <button class="add-btn-3d" onclick="addToCart(${p.id})">
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus"></i> Add
                 </button>
             </div>
         `;
@@ -220,16 +250,32 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addToCart = (id) => {
         const item = products.find(p => p.id === id);
         if (!item) return;
-        const existing = cart.find(c => c.id === id);
-        if (existing) existing.quantity += 1;
-        else cart.push({ ...item, quantity: 1 });
+
+        const packEl = document.getElementById(`pack-${id}`);
+        const chosenPack = packEl ? packEl.value : '500g';
+        const chosenVariant = selectedVariants[id] || '';
+        const basketKey = `${id}__${chosenVariant}__${chosenPack}`;
+
+        const existing = cart.find(c => c.basketKey === basketKey);
+        if (existing) {
+            existing.quantity += 1;
+        } else {
+            cart.push({
+                basketKey,
+                id: item.id,
+                name: item.name,
+                variant: chosenVariant,
+                pack: chosenPack,
+                quantity: 1
+            });
+        }
         saveCart();
         updateCartUI();
         cartModal.classList.add('active');
     };
 
-    window.changeQty = (id, delta) => {
-        const idx = cart.findIndex(c => c.id === id);
+    window.changeQty = (basketKey, delta) => {
+        const idx = cart.findIndex(c => c.basketKey === basketKey);
         if (idx === -1) return;
         cart[idx].quantity += delta;
         if (cart[idx].quantity <= 0) cart.splice(idx, 1);
@@ -238,37 +284,35 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function saveCart() {
-        localStorage.setItem('chaitanya_cart_v2', JSON.stringify(cart));
+        localStorage.setItem('chaitanya_client_basket_v3', JSON.stringify(cart));
     }
 
     function updateCartUI() {
         const count = cart.reduce((acc, i) => acc + i.quantity, 0);
         cartCount.textContent = count;
+        cartTotalItems.textContent = `${count} ${count === 1 ? 'pack' : 'packs'}`;
 
         if (cart.length === 0) {
-            cartItemsList.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:2rem;">Your basket is empty. Add fresh sweets or dry fruits!</p>';
-            cartTotalPrice.textContent = '₹0';
+            cartItemsList.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:2rem;">Your order list is empty. Select dry fruits or traditional sweets to order!</p>';
             return;
         }
 
-        let total = 0;
         cartItemsList.innerHTML = cart.map(item => {
-            total += item.price * item.quantity;
+            const detailLabel = [item.variant, item.pack].filter(Boolean).join(' • ');
             return `
                 <div class="cart-row">
                     <div>
                         <strong>${item.name}</strong>
-                        <div style="font-size:0.85rem;color:var(--text-muted);">₹${item.price} × ${item.quantity}</div>
+                        <div style="font-size:0.82rem;color:var(--text-muted);">${detailLabel}</div>
                     </div>
                     <div class="qty-controls">
-                        <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
+                        <button class="qty-btn" onclick="changeQty('${item.basketKey.replace(/'/g, "\'")}', -1)">-</button>
                         <strong>${item.quantity}</strong>
-                        <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+                        <button class="qty-btn" onclick="changeQty('${item.basketKey.replace(/'/g, "\'")}', 1)">+</button>
                     </div>
                 </div>
             `;
         }).join('');
-        cartTotalPrice.textContent = `₹${total}`;
     }
 
     document.getElementById('cartToggleBtn').addEventListener('click', () => cartModal.classList.add('active'));
@@ -276,16 +320,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('closeCheckoutBtn').addEventListener('click', () => checkoutModal.classList.remove('active'));
 
     document.getElementById('checkoutBtn').addEventListener('click', () => {
-        if (cart.length === 0) return alert('Please add items to your basket first.');
+        if (cart.length === 0) return alert('Please add items to your order list first.');
         document.getElementById('orderType').value = 'instant';
-        document.getElementById('modalOrderTitle').textContent = 'Complete Your Order';
+        document.getElementById('modalOrderTitle').textContent = 'Send Order to Chaitanya Foods';
         cartModal.classList.remove('active');
         checkoutModal.classList.add('active');
     });
 
     document.getElementById('openAdvanceModalBtn').addEventListener('click', () => {
         document.getElementById('orderType').value = 'advance';
-        document.getElementById('modalOrderTitle').textContent = 'Book Advance Sweet Order';
+        document.getElementById('modalOrderTitle').textContent = 'Advance Sweet Order (ముందస్తు ఆర్డర్)';
         checkoutModal.classList.add('active');
     });
 
@@ -295,35 +339,42 @@ document.addEventListener('DOMContentLoaded', () => {
         const phone = document.getElementById('customerPhone').value.trim();
         const address = document.getElementById('customerAddress').value.trim();
         const order_type = document.getElementById('orderType').value;
-        const total_amount = cart.reduce((acc, i) => acc + i.price * i.quantity, 0);
 
+        // Save to MySQL if backend server is running
         try {
-            const res = await fetch(`${API_BASE_URL}/api/orders`, {
+            await fetch(`${API_BASE_URL}/api/orders`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ customer_name, phone, address, items: cart, total_amount, order_type })
+                body: JSON.stringify({ customer_name, phone, address, items: cart, order_type })
             });
-            if (!res.ok) throw new Error('Backend offline');
-            alert('Order confirmed! Chaitanya Lakshmi will contact you shortly.');
-            cart = [];
-            saveCart();
-            updateCartUI();
-            checkoutModal.classList.remove('active');
-            e.target.reset();
         } catch (err) {
-            // WhatsApp fallback if static Amplify site isn't connected to EC2 backend yet
-            const summary = cart.length
-                ? cart.map(i => `${i.name} (${i.quantity})`).join(', ')
-                : 'Advance Sweet Enquiry';
-            const waText = encodeURIComponent(`Namaste Chaitanya Foods!
-Name: ${customer_name}
-Phone: ${phone}
-Type: ${order_type.toUpperCase()}
-Items: ${summary}
-Address/Notes: ${address}`);
-            window.open(`https://wa.me/919381331281?text=${waText}`, '_blank');
-            checkoutModal.classList.remove('active');
+            // Continue smoothly to WhatsApp order dispatch
         }
+
+        const itemLines = cart.length
+            ? cart.map((i, idx) => `${idx + 1}. ${i.name} (${[i.variant, i.pack].filter(Boolean).join(', ')}) x ${i.quantity}`).join('
+')
+            : 'Advance Sweet Order Enquiry';
+
+        const waMessage = `Namaste Chaitanya Lakshmi (Chaitanya Foods)!
+
+*Order Type:* ${order_type === 'advance' ? 'ADVANCE ORDER' : 'FRESH HOME DELIVERY ORDER'}
+*Name:* ${customer_name}
+*Phone:* ${phone}
+
+*Items Requested:*
+${itemLines}
+
+*Address / Notes:* ${address}
+
+Please confirm availability and today's price.`;
+
+        window.open(`https://wa.me/919381331281?text=${encodeURIComponent(waMessage)}`, '_blank');
+        cart = [];
+        saveCart();
+        updateCartUI();
+        checkoutModal.classList.remove('active');
+        e.target.reset();
     });
 
     loadProducts();
