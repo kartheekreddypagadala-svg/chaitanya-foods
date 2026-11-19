@@ -27,7 +27,7 @@ pool.getConnection()
         conn.release();
     })
     .catch(err => {
-        console.warn('MySQL connection warning (frontend fallback active):', err.message);
+        console.warn('MySQL connection warning (client catalog fallback active):', err.message);
     });
 
 app.get('/api/products', async (req, res) => {
@@ -41,17 +41,17 @@ app.get('/api/products', async (req, res) => {
 
 app.post('/api/orders', async (req, res) => {
     try {
-        const { customer_name, phone, address, items, total_amount, order_type } = req.body;
+        const { customer_name, phone, address, items, order_type } = req.body;
         const [result] = await pool.query(
-            'INSERT INTO orders (customer_name, phone, address, items, total_amount, order_type) VALUES (?, ?, ?, ?, ?, ?)',
-            [customer_name, phone, address, JSON.stringify(items), total_amount, order_type || 'instant']
+            'INSERT INTO orders (customer_name, phone, address, items, order_type) VALUES (?, ?, ?, ?, ?)',
+            [customer_name, phone, address, JSON.stringify(items), order_type || 'instant']
         );
-        res.status(201).json({ success: true, orderId: result.insertId, message: 'Order placed successfully!' });
+        res.status(201).json({ success: true, orderId: result.insertId, message: 'Order request received!' });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 });
 
 app.listen(PORT, () => {
-    console.log(`Chaitanya Foods 3D server running on http://localhost:${PORT}`);
+    console.log(`Chaitanya Foods server running on http://localhost:${PORT}`);
 });
