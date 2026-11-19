@@ -10,11 +10,19 @@
 </head>
 <body>
 
-    <!-- Ambient 3D Glow Orbs -->
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-inner">
+            <span>Direct From Factory • Freshly Packed • Home Delivery Available</span>
+            <a href="#advance-orders" class="announcement-link">Advance Sweet Orders Open</a>
+        </div>
+    </div>
+
+    <!-- Ambient Glow Orbs -->
     <div class="ambient-orb orb-gold"></div>
     <div class="ambient-orb orb-amber"></div>
 
-    <!-- Floating Glass Navigation -->
+    <!-- Sticky Header -->
     <header class="header">
         <div class="container nav-container">
             <a href="#" class="logo">
@@ -31,7 +39,7 @@
                 <a href="#dry-fruits">Dry Fruits</a>
                 <a href="#sweets">Sweets</a>
                 <a href="#more-sweets">More Sweets</a>
-                <a href="#advance-orders">Advance Orders</a>
+                <a href="#gifting">Event Gifting</a>
                 <a href="#contact">Contact</a>
             </nav>
 
@@ -48,29 +56,29 @@
         </div>
     </header>
 
-    <!-- 3D Hero Section -->
+    <!-- Hero Banner -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="eyebrow-pill">
-                    <span class="pulse-dot"></span> DRY FRUITS & TELUGU SWEETS
+                    <span class="pulse-dot"></span> SAMPRADAYA RUCHULU • DRY FRUITS & SWEETS
                 </div>
-                <h1>Fresh dry fruits and traditional sweets, <span class="text-gradient">packed for you.</span></h1>
-                <p class="hero-desc">Premium factory-direct cashews & almonds, authentic Pootha Rekulu, Neti Bobbatlu, Ariselu, Raagi Laddu, Dry Fruit Laddu, Nuvvundalu & Sunnundalu. Freshly packed and delivered to your home.</p>
-                
+                <h1>Make every celebration <span class="text-gradient">sweeter & fresher.</span></h1>
+                <p class="hero-desc">Factory-direct cashews & almonds, crisp Pootha Rekulu, pure ghee Neti Bobbatlu, Ariselu, Raagi Laddu, Dry Fruit Laddu, Nuvvundalu & Sunnundalu — freshly packed and delivered home.</p>
+
                 <div class="hero-cta-group">
                     <a href="#sweets" class="btn-3d btn-primary-3d">
-                        <span>Order Now</span>
+                        <span>Shop Sweets</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="#dry-fruits" class="btn-3d btn-glass-3d">
-                        <span>View Dry Fruits</span>
+                        <span>Shop Dry Fruits</span>
                     </a>
                 </div>
 
                 <div class="trust-row">
                     <div class="delivery-chip">
-                        <i class="fa-solid fa-truck-fast"></i> HOME DELIVERY AVAILABLE
+                        <i class="fa-solid fa-truck-fast"></i> Home Delivery Available
                     </div>
                     <div class="rating-chip">
                         <i class="fa-solid fa-industry"></i> Direct From Factory
@@ -78,12 +86,12 @@
                 </div>
             </div>
 
-            <!-- Interactive 3D Floating Showcase -->
+            <!-- Interactive Floating Showcase -->
             <div class="hero-stage" id="heroStage">
                 <div class="stage-pedestal">
                     <div class="stage-ring ring-outer"></div>
                     <div class="stage-ring ring-inner"></div>
-                    
+
                     <div class="floating-dish dish-1">
                         <img src="images/cashew-nuts.jpg" alt="Cashew Nuts">
                         <span class="dish-label">Cashew Nuts</span>
@@ -111,7 +119,7 @@
         </div>
     </section>
 
-    <!-- 3D Tactile Ribbon Bar -->
+    <!-- Highlights Ribbon -->
     <section class="ribbon-section">
         <div class="container">
             <div class="ribbon-card-3d">
@@ -124,48 +132,57 @@
         </div>
     </section>
 
-    <!-- Dry Fruits Section -->
+    <!-- Dry Fruits Catalog -->
     <section id="dry-fruits" class="section">
         <div class="container">
             <div class="section-header">
                 <span class="section-kicker">DRY FRUITS</span>
-                <h2 class="section-title">Cashew Nuts & Almonds, packed fresh.</h2>
+                <h2 class="section-title">Cashew Nuts & Almonds</h2>
             </div>
-            <div class="cards-grid-2" id="dryFruitsGrid">
-                <!-- Populated dynamically -->
-            </div>
+            <div class="cards-grid-2" id="dryFruitsGrid"></div>
         </div>
     </section>
 
-    <!-- Traditional Sweets Section -->
+    <!-- Traditional Sweets Catalog -->
     <section id="sweets" class="section section-warm">
         <div class="container">
             <div class="section-header">
                 <span class="section-kicker">TRADITIONAL SWEETS</span>
-                <h2 class="section-title">Pootha Rekulu & Neti Bobbatlu.</h2>
+                <h2 class="section-title">Pootha Rekulu & Neti Bobbatlu</h2>
             </div>
-            <div class="cards-grid-2" id="sweetsGrid">
-                <!-- Populated dynamically -->
-            </div>
+            <div class="cards-grid-2" id="sweetsGrid"></div>
 
             <div class="sub-header" id="more-sweets">
                 <h3>More Traditional Sweets</h3>
                 <p>Ariselu • Raagi Laddu • Dry Fruit Laddu • Nuvvundalu • Sunnundalu</p>
             </div>
-            <div class="mini-cards-grid" id="moreSweetsGrid">
-                <!-- Populated dynamically -->
+            <div class="mini-cards-grid" id="moreSweetsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Event & Festive Gifting Feature -->
+    <section id="gifting" class="section">
+        <div class="container gifting-banner">
+            <div class="gifting-content">
+                <span class="section-kicker">FESTIVE & EVENT GIFTING</span>
+                <h2>Customised Sweet & Dry Fruit Boxes</h2>
+                <p>Ideal for weddings, housewarmings, festivals, and family gatherings. Choose your preferred varieties and pack sizes to be freshly packed on schedule.</p>
+                <button class="btn-3d btn-primary-3d" id="openGiftingModalBtn">
+                    <span>Request Bulk / Event Order</span>
+                    <i class="fa-solid fa-gift"></i>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- 3D Dark Cocoa Advance Orders Banner -->
+    <!-- Advance Orders Dark Banner -->
     <section id="advance-orders" class="advance-section">
         <div class="container">
             <div class="advance-card-3d">
                 <div class="advance-glow"></div>
                 <span class="kicker-gold">ADVANCE ORDERS • ముందస్తు ఆర్డర్లు</span>
                 <h2 class="telugu-headline">ముందస్తు ఆర్డర్లపై అన్ని రకాల స్వీట్స్ సప్లై చేయబడును</h2>
-                <p>All kinds of sweets are supplied on advance orders for weddings, festivals, and family occasions. Call Chaitanya Lakshmi early so your order is freshly prepared and ready when you need it.</p>
+                <p>All kinds of sweets are supplied on advance orders. Contact Chaitanya Lakshmi in advance so your sweets and dry fruits are freshly prepared and delivered on time.</p>
                 <div class="advance-actions">
                     <button class="btn-3d btn-gold-3d" id="openAdvanceModalBtn">
                         <i class="fa-solid fa-calendar-plus"></i> Place Advance Order
@@ -178,13 +195,13 @@
         </div>
     </section>
 
-    <!-- Order Now / Direct Contact Section -->
+    <!-- Contact & Order Desk -->
     <section id="contact" class="section">
         <div class="container contact-grid">
             <div class="contact-info">
                 <span class="section-kicker">ORDER NOW • HOME DELIVERY AVAILABLE</span>
-                <h2>Tell us what you need.<br>We will pack it fresh.</h2>
-                <p>Select your items and preferred varieties above, or call / WhatsApp <strong>Chaitanya Lakshmi</strong> directly with the items and quantity you want. Home delivery is available.</p>
+                <h2>Freshly packed & ready for delivery.</h2>
+                <p>Add items to your order basket or message/call <strong>Chaitanya Lakshmi</strong> directly with your list and quantity.</p>
             </div>
 
             <div class="contact-box-3d">
@@ -216,21 +233,21 @@
         </div>
     </footer>
 
-    <!-- 3D Slide-Over Order Basket Drawer -->
+    <!-- Slide-Over Order Basket Drawer -->
     <div class="modal-backdrop" id="cartModal">
         <div class="drawer-3d">
             <div class="drawer-header">
-                <h3><i class="fa-solid fa-bag-shopping"></i> Your Order List</h3>
+                <h3><i class="fa-solid fa-bag-shopping"></i> Your Order Basket</h3>
                 <button class="icon-close" id="closeCartBtn">&times;</button>
             </div>
             <div class="drawer-body" id="cartItemsList"></div>
             <div class="drawer-footer">
                 <div class="total-row">
-                    <span>Selected Items</span>
-                    <strong id="cartTotalItems">0 items</strong>
+                    <span>Selected Packs</span>
+                    <strong id="cartTotalItems">0 packs</strong>
                 </div>
                 <button class="btn-3d btn-primary-3d btn-full" id="checkoutBtn">
-                    Send Order to Chaitanya Foods <i class="fa-brands fa-whatsapp"></i>
+                    Proceed to Order <i class="fa-brands fa-whatsapp"></i>
                 </button>
             </div>
         </div>
@@ -254,11 +271,11 @@
                     <input type="tel" id="customerPhone" required placeholder="Enter mobile number">
                 </div>
                 <div class="input-group">
-                    <label>Delivery Address / Event Date (for Advance Orders)</label>
-                    <textarea id="customerAddress" rows="3" required placeholder="Enter home delivery address & any extra notes"></textarea>
+                    <label>Delivery Address / Event Date & Notes</label>
+                    <textarea id="customerAddress" rows="3" required placeholder="Enter delivery address, event date, or custom notes"></textarea>
                 </div>
                 <button type="submit" class="btn-3d btn-whatsapp-3d btn-full">
-                    <i class="fa-brands fa-whatsapp"></i> Confirm & Send Order
+                    <i class="fa-brands fa-whatsapp"></i> Send Order via WhatsApp
                 </button>
             </form>
         </div>
