@@ -11,7 +11,6 @@
     --green: #1E7E48;
     --border-soft: rgba(46, 27, 14, 0.08);
     
-    /* 3D Depth Shadows */
     --shadow-card-3d: 
         0 20px 40px -15px rgba(46, 27, 14, 0.12),
         0 8px 16px -8px rgba(46, 27, 14, 0.08),
@@ -88,7 +87,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 }
 
 .nav-container {
-    background: rgba(255, 255, 255, 0.82);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.9);
@@ -141,14 +140,14 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.75rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     transition: var(--transition);
 }
 
@@ -334,7 +333,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 }
 
 .hero-content h1 {
-    font-size: 3.55rem;
+    font-size: 3.5rem;
     line-height: 1.12;
     color: var(--cocoa);
     margin-bottom: 1.35rem;
@@ -347,9 +346,9 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 }
 
 .hero-desc {
-    font-size: 1.12rem;
+    font-size: 1.08rem;
     color: var(--text-muted);
-    max-width: 530px;
+    max-width: 540px;
     margin-bottom: 2.25rem;
 }
 
@@ -372,8 +371,8 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 0.82rem;
+    font-weight: 800;
 }
 
 .delivery-chip {
@@ -416,13 +415,8 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
     pointer-events: none;
 }
 
-.ring-outer {
-    inset: 28px;
-}
-
-.ring-inner {
-    inset: 85px;
-}
+.ring-outer { inset: 28px; }
+.ring-inner { inset: 85px; }
 
 .floating-dish {
     position: absolute;
@@ -473,8 +467,8 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) translateZ(50px);
-    width: 136px;
-    height: 136px;
+    width: 138px;
+    height: 138px;
     border-radius: 50%;
     background: rgba(46, 27, 14, 0.94);
     color: #fff;
@@ -580,7 +574,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 /* 3D Product Cards */
 .cards-grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     gap: 2rem;
 }
 
@@ -589,13 +583,12 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
     border-radius: 28px;
     padding: 1.75rem;
     display: grid;
-    grid-template-columns: 170px 1fr;
+    grid-template-columns: 175px 1fr;
     gap: 1.5rem;
     align-items: center;
     border: 1px solid var(--border-soft);
     box-shadow: var(--shadow-card-3d);
     transition: var(--transition);
-    transform-style: preserve-3d;
 }
 
 .product-card-3d:hover {
@@ -604,8 +597,8 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 }
 
 .product-thumb-3d {
-    width: 170px;
-    height: 170px;
+    width: 175px;
+    height: 190px;
     border-radius: 24px;
     overflow: hidden;
     position: relative;
@@ -627,7 +620,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: rgba(46, 27, 14, 0.88);
+    background: rgba(46, 27, 14, 0.9);
     color: var(--gold);
     font-size: 0.68rem;
     font-weight: 800;
@@ -637,67 +630,88 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 }
 
 .product-details h3 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     color: var(--cocoa);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.15rem;
+}
+
+.product-subtitle {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--gold-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.5rem;
 }
 
 .product-details p {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
     margin-bottom: 0.85rem;
 }
 
+/* Interactive Variety Pills */
 .tag-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin-bottom: 1.15rem;
+    margin-bottom: 1rem;
 }
 
 .tag-pill {
     background: #FBF1DD;
     color: #8F5B0C;
-    font-size: 0.74rem;
+    border: 1px solid rgba(217, 146, 30, 0.25);
+    font-size: 0.73rem;
     font-weight: 700;
-    padding: 0.25rem 0.65rem;
+    padding: 0.28rem 0.68rem;
     border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tag-pill.active, .tag-pill:hover {
+    background: var(--cocoa);
+    color: var(--gold);
+    border-color: var(--cocoa);
 }
 
 .product-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.75rem;
     padding-top: 0.85rem;
     border-top: 1px solid var(--border-soft);
 }
 
-.price-tag {
-    font-size: 1.3rem;
-    font-weight: 800;
+.pack-select {
+    padding: 0.45rem 0.65rem;
+    border-radius: 12px;
+    border: 1px solid rgba(46,27,14,0.16);
+    background: var(--bg-main);
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--cocoa);
-}
-
-.price-tag span {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--text-muted);
+    cursor: pointer;
 }
 
 .add-btn-3d {
     background: linear-gradient(145deg, #F6C55E, #E09A24);
     color: var(--cocoa);
     border: none;
-    padding: 0.55rem 1.1rem;
+    padding: 0.55rem 1.05rem;
     border-radius: 14px;
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     box-shadow: 0 6px 14px rgba(217, 146, 30, 0.3), inset 0 1px 0 rgba(255,255,255,0.6);
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .add-btn-3d:hover {
@@ -707,7 +721,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 /* Mini Cards Grid */
 .mini-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
     gap: 1.5rem;
 }
 
@@ -744,21 +758,22 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 }
 
 .mini-card-3d h4 {
-    font-size: 1.12rem;
+    font-size: 1.08rem;
     color: var(--cocoa);
     margin-bottom: 0.25rem;
 }
 
 .mini-unit {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
 }
 
 .mini-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
     padding-top: 0.75rem;
     border-top: 1px solid var(--border-soft);
 }
@@ -864,7 +879,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 
 .contact-person {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--cocoa);
 }
@@ -939,7 +954,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 
 .drawer-3d {
     width: 100%;
-    max-width: 430px;
+    max-width: 440px;
     height: 100%;
     background: var(--bg-main);
     padding: 2rem;
@@ -1033,7 +1048,7 @@ h1, h2, h3, h4, .brand-name, .telugu-headline {
 .total-row {
     display: flex;
     justify-content: space-between;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     margin-bottom: 1rem;
 }
 
